@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Cookie Clicker Upgrades Optimizer",
+  "description": "This extension will optimize your upgrades buyout",
+  "version": "1.0",
+  "content_security_policy": "default-src 'self' 'sha256-747489d4f5a454469f3610aff6863f3f4689a5437de771b34da7c3da8412d13c='",
+  "browser_action": {
+   "default_icon": "goldCookie.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ],
+   "content_scripts": [
+    {
+      "matches": ["http://orteil.dashnet.org/cookieclicker/"],
+      "js": ["injectScript.js"]
+    }
+  ],
+   "web_accessible_resources": [
+     "cookieclicker.js"
+    ]
+}
