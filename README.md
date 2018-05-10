@@ -2,7 +2,7 @@
 
 Unpacked extension for cookie clicker
 
-Just clone the project and go to chrome://extensions to load to app at root folder
+Just clone the project and go to chrome://extensions to load to app as root folder
 
 - Optimized to buy achievements for buildings and cookie thresholds ie: (reach 50 of everything, 100, 150 etc)
 - Buy automatically upgrades
