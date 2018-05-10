@@ -7,7 +7,7 @@ Just clone the project and go to chrome://extensions to load to app at root fold
 - Optimized to buy achievements for buildings and cookie thresholds ie: (reach 50 of everything, 100, 150 etc)
 - Buy automatically upgrades
 - Buy automatically researches
-- Reduce research time to 0 (because you know, you dont have to time for that shit)
+- Reduce research time to 0 (because you know, you dont have time for that shit)
 - Pop your wrinklers
 
 Cheers!
