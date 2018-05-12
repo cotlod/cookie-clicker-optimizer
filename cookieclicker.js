@@ -85,7 +85,7 @@ function buyProducts(){
 			if(product.amount < threshold){
 				var thresholdCost = product.getSumPrice(threshold - product.amount)
 				console.log(`threshold cost for ${product.name} is ${Beautify(thresholdCost)} over ${Beautify(currentAchievementCost)} for cheapestAchievement`)
-				if(cheapestAchievement && currentAchievementCost < thresholdCost){
+				if(cheapestAchievement && currentAchievementCost < thresholdCost && cheapestAchievement.buildingTie.locked !== 1){
 					console.log(`trying to get achievement > ${cheapestAchievement.desc} for ${Beautify(currentAchievementCost)}`);
 					Game.ObjectsById[cheapestAchievement.buildingTie.id].buy();
 				}else{
