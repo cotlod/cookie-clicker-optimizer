@@ -34,8 +34,8 @@ function checkCurrentAchievement(productId){
 		}
 		
 		var cost = getAchievementCost(achievement);
-		
-		console.log(`checking achievement > ${achievement.desc} needing ${(achievement.tier - 1) * PRODUCT_GAP} buildings for ${Beautify(cost)}`);
+
+		console.log(`checking achievement > ${achievement.desc} needing ${getBuildingNeeded(achievement)} buildings for ${Beautify(cost)}`);
 		if (cost < currentCost) {
 			if(cheapestAchievement){
 				console.log(`is cheaper then ${cheapestAchievement.desc} by ${cost - currentCost}`);
@@ -47,8 +47,12 @@ function checkCurrentAchievement(productId){
 	return cheapestAchievement;
 }
 
+function getBuildingNeeded(achievement) {
+	return  achievement.tier == 1 ? 1 : (achievement.tier - 1) * PRODUCT_GAP;
+}
+
 function getAchievementCost(achievement){
-	var productDiff = (achievement.tier - 1) * PRODUCT_GAP - achievement.buildingTie.amount;
+	var productDiff = getBuildingNeeded(achievement) - achievement.buildingTie.amount;
 	var cost = achievement.buildingTie.getSumPrice(productDiff);
 	return cost;
 }
